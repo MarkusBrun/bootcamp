@@ -1,1 +1,1 @@
-# ctBOOTCAMP
+# intensive, full-time, 11-week bootcamp designed to prepare you to be successful as a junior web developer. Classes and  Labs will be taking place 9:30 AM - 6 PM Monday through Friday. You should also plan on spending another 5 - 10 hours a week working outside the class. This program will cover industry relevant, languages, tools, and technologies including: HTML/HTML5, CSS, JavaScript, Ruby. We will go deep in these topics covering topics such as: LESS/SCSS, React.JS, Ruby on Rails, git version control, design patterns, and deployments.
