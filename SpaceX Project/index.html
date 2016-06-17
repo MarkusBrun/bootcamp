@@ -7,204 +7,60 @@
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
 </head>
-
+<link rel="stylesheet" type="text/css" href="main.css">
 <body>
-    <header id="home">
+    <header id="home" class="header">
+      <nav class="navigation">
+          <ul class="navUL">
+              <li class="headerLI">
+                  <a href="#history">History</a>
+              </li>
+              <li class="headerLI">
+                  <a href="#funding">Funding</a>
+              </li>
+              <li class="headerLI">
+                  <a href="#goals">Goals</a>
+              </li>
+              <li class="headerLI">
+                  <a href="#setbacks">Setbacks</a>
+              </li>
+          </ul>
+      </nav>
         <h1>Space X</h1>
-        <address>1 Rocket Road, Hawthorne, California.</address>
-        <p>An Elon Musk Company</p>
+        <p class="headerP">An Elon Musk Company</p>
     </header>
-    <section class="media">
-      <figure class="video1">
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/gLNmtUEvI5A" frameborder="0" allowfullscreen></iframe>
-        <figcaption>For this mission, SpaceX's Falcon 9 rocket will deliver two commercial communications satellites to Geostationary Transfer Orbits (GTO).</figcaption>
-      </figure>
-      <figure class="audio1">
-        <audio controls style="width:310px;" autoplay><source src="http://missspooky.free.fr/mswfilm/John_Williams_Star_Wars_-_The_Imperial_March_(Darth_Vader_s_Theme)_-_John_Williams[1].mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
-      </figure>
-    </section>
-    <section class="launchTable">
-      <table class="launch-table-table">
-        <thead class="launch-table-head">
-          <tr>
-            <th>Launch Date</th>
-            <th>Customer</th>
-            <th>Launch Site</th>
-            <th>Vehicle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>5/27/2016</td>
-            <td>THAICOM 8</td>
-            <td>CAPE CANAVERAL</td>
-            <td>FALCON 9</td>
-          </tr>
-          <tr>
-            <td>5/6/2016</td>
-            <td>SKY PERFECT JSAT CORPORATION (JAPAN)</td>
-            <td>CAPE CANAVERAL</td>
-            <td>FALCON 9</td>
-          </tr>
-          <tr>
-            <td>4/8/2016</td>
-            <td>NASA RESUPPLY TO ISS(FLIGHT 8)</td>
-            <td>CAPE CANAVERAL</td>
-            <td>DRAGON & FALCON 9</td>
-          </tr>
-          <tr>
-            <td>3/4/2016</td>
-            <td>SES (SES-9)</td>
-            <td>CAPE CANAVERAL</td>
-            <td>FALCON 9</td>
-          </tr>
-          <tr>
-            <td>1/17/2016</td>
-            <td>NASA (JASON-3)</td>
-            <td>VANDENBERG</td>
-            <td>FALCON 9</td>
-          </tr>
-          <tr>
-            <td>12/21/2015</td>
-            <td>ORBCOMM</td>
-            <td>CAPE CANAVERAL</td>
-            <td>FALCON 9</td>
-          </tr>
-          <tr>
-            <td>4/27/2015</td>
-            <td>THALES ALENIA SPACE</td>
-            <td>CAPE CANAVERAL</td>
-            <td>FALCON 9</td>
-          </tr>
-          <tr>
-            <td>4/14/2016</td>
-            <td>NASA RESUPPLY TO ISS (FLIGHT 6)</td>
-            <td>CAPE CANAVERAL</td>
-            <td>DRAGON & FALCON 9</td>
-          </tr>
-          <tr>
-            <td>2/11/2016</td>
-            <td>US AIR FORCE (DSCOVR)</td>
-            <td>CAPE CANAVERAL</td>
-            <td>FALCON 9</td>
-          </tr>
-          <tr>
-            <td>1/10/2015</td>
-            <td>NASA RESUPPLY TO ISS (FLIGHT 5)</td>
-            <td>CAPE CANAVERAL</td>
-            <td>DRAGON & FALCON 9</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <nav>
-        <ul>
-            <li>
-                <a href="#history">History</a>
-            </li>
-            <li>
-                <a href="#funding">Funding</a>
-            </li>
-            <li>
-                <a href="#goals">Goals</a>
-            </li>
-            <li>
-                <a href="#setbacks">Setbacks</a>
-            </li>
-        </ul>
-    </nav>
-
-    <aside>
+    <aside class="contentBanner">
         <img height="100px" src="http://subhoswapno.com/publicity/images/web-development-banner.jpg" alt="Web Banner">
     </aside>
-
+    <figure class="audio1">
+      <figcaption>For your listening pleasure</figcaption>
+      <audio controls style="width:310px;"><source src="http://missspooky.free.fr/mswfilm/John_Williams_Star_Wars_-_The_Imperial_March_(Darth_Vader_s_Theme)_-_John_Williams[1].mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+    </figure>
     <main>
-        <article>
-            <h2>History</h2>
-            <section>
+        <article class="history">
+            <h2 class="historyTitle">History of SpaceX</h2>
+            <section class="historyText">
                 <h3 id="history">History</h3>
-                <a href="#home">Back to Top</a>
+                <a href="#home" class="back1">Back to Top</a>
                 <p>
-                    In 2001, <em>Musk</em> conceptualized "Mars Oasis"; a project to land a miniature experimental greenhouse on Mars, containing seeds with dehydrated gel, hydrating the gel and having plants grow on Martian soil, "so this would be the furthest that life's ever traveled"[14]
-                    in an attempt to regain public interest in space exploration and increase the Budget of NASA.[15][16][17] But Musk realized that even with a much larger space budget, travel to Mars would be prohibitively expensive and that a fundamental
-                    breakthrough in rocket technology was needed.[17] In October 2001, Musk travelled to Moscow with Jim Cantrell (an aerospace supplies fixer), and Adeo Ressi (his best friend from college), to buy refurbished ICBMs (Dnepr) that could
-                    send the envisioned payloads into space.[18] The group met with companies such as Lavochkin and ISC Kosmotras. However, according to Cantrell, Musk was seen as a novice and was consequently spat on by one of the Russian chief designers,
-                    and the group returned to the US empty-handed.[19] In February 2002, the group returned to Russia to look for three ICBMs, bringing along Mike Griffin, who had worked for the CIA's venture capital arm, In-Q-Tel; NASA's Jet Propulsion
-                    Laboratory; and was just leaving Orbital Sciences Corporation, a maker of satellites and spacecraft. The group met again with Kosmotras, and were offered one rocket for US$8 million. However, this was seen by Musk as too expensive;
-                    Musk consequently stormed out of the meeting. On the flight back from Moscow, Musk realized that he could start a company that could build the affordable rockets he needed.[19] According to early Tesla and SpaceX investor Steve Jurvetson,[20]
-                    Musk calculated that the raw materials for building a rocket actually were only 3 percent of the sales price of a rocket at the time. By applying vertical integration-principally for cost reasons;[18] around 85% of the entire Falcon/Dragon
-                    vehicle is produced in-house[21][22]- and the modular approach from software engineering (Falcon 9 uses 9 of the Merlin engines, which were tested on the single engine Falcon 1, Falcon Heavy uses three Falcon 9 booster stages), SpaceX
-                    could cut launch price by a factor of ten and still enjoy a 70 percent gross margin.[23] Another reason for vertical integration is that Musk thinks reusable rockets cannot be built with components from existing suppliers, that all
-                    the other aerospace companies are buying from as well. For example, SpaceX had to design a machine that could friction stir weld aluminium-lithium alloy for the airframe of the Falcon 9, because such a machine did not exist anywhere
-                    in the world.[24] According to Musk, SpaceX started with the smallest useful orbital rocket (Falcon 1 with about half a ton to orbit), instead of building a more complex and riskier launch vehicle, which could have failed and bankrupted
-                    the company.[25]
-                </p>
-                <p>
-                    In early 2002, Musk was seeking staff for his new space company, soon to be named SpaceX. Musk approached renowned rocket engineer Tom Mueller (now SpaceX's VP of Propulsion), Mueller agreed to work for Musk and SpaceX was born.[26] SpaceX was first headquartered
-                    in a 75,000 square feet warehouse in El Segundo, California. Musk decided SpaceX's first rocket would be named Falcon 1, a nod to Star Wars' Millennium Falcon. Musk planned for Falcon 1's first launch to occur in November 2003, 15
-                    months after the company started.[19]
-                </p>
-                <p>
-                    In January 2005, <em>SpaceX bought a 10% stake in Surrey Satellite Technology.</em>[27]
-                </p>
-                <p>
+                    In 2001, <em>Musk</em> conceptualized "Mars Oasis"; a project to land a miniature experimental greenhouse on Mars, containing seeds with dehydrated gel, hydrating the gel and having plants grow on Martian soil, "so this would be the furthest that life's ever traveled"[14] in an attempt to regain public interest in space exploration and increase the Budget of NASA.[15][16][17] But Musk realized that even with a much larger space budget, travel to Mars would be prohibitively expensive and that a fundamental breakthrough in rocket technology was needed.[17] In October 2001, Musk travelled to Moscow with Jim Cantrell (an aerospace supplies fixer), and Adeo Ressi (his best friend from college), to buy refurbished ICBMs (Dnepr) that could send the envisioned payloads into space.[18] The group met with companies such as Lavochkin and ISC Kosmotras. However, according to Cantrell, Musk was seen as a novice and was consequently spat on by one of the Russian chief designers, and the group returned to the US empty-handed.[19] In February 2002, the group returned to Russia to look for three ICBMs, bringing along Mike Griffin, who had worked for the CIA's venture capital arm, In-Q-Tel; NASA's Jet Propulsion Laboratory; and was just leaving Orbital Sciences Corporation, a maker of satellites and spacecraft. The group met again with Kosmotras, and were offered one rocket for US$8 million. However, this was seen by Musk as too expensive; Musk consequently stormed out of the meeting. On the flight back from Moscow, Musk realized that he could start a company that could build the affordable rockets he needed.[19] According to early Tesla and SpaceX investor Steve Jurvetson,[20] Musk calculated that the raw materials for building a rocket actually were only 3 percent of the sales price of a rocket at the time. By applying vertical integration-principally for cost reasons;[18] around 85% of the entire Falcon/Dragon vehicle is produced in-house[21][22]- and the modular approach from software engineering (Falcon 9 uses 9 of the Merlin engines, which were tested on the single engine Falcon 1, Falcon Heavy uses three Falcon 9 booster stages), SpaceX could cut launch price by a factor of ten and still enjoy a 70 percent gross margin.[23] Another reason for vertical integration is that Musk thinks reusable rockets cannot be built with components from existing suppliers, that all the other aerospace companies are buying from as well. For example, SpaceX had to design a machine that could friction stir weld aluminium-lithium alloy for the airframe of the Falcon 9, because such a machine did not exist anywhere in the world.[24] According to Musk, SpaceX started with the smallest useful orbital rocket (Falcon 1 with about half a ton to orbit), instead of building a more complex and riskier launch vehicle, which could have failed and bankrupted the company.[25] In early 2002, Musk was seeking staff for his new space company, soon to be named SpaceX. Musk approached renowned rocket engineer Tom Mueller (now SpaceX's VP of Propulsion), Mueller agreed to work for Musk and SpaceX was born.[26] SpaceX was first headquartered in a 75,000 square feet warehouse in El Segundo, California. Musk decided SpaceX's first rocket would be named Falcon 1, a nod to Star Wars' Millennium Falcon. Musk planned for Falcon 1's first launch to occur in November 2003, 15
+                    months after the company started.[19] In January 2005, <em>SpaceX bought a 10% stake in Surrey Satellite Technology.</em>[27]
                     By March 2006, Musk had invested US$100 million of his own money into the company.[28]
-                </p>
-                <p>
                     On August 4, 2008, <em>SpaceX accepted a further $20 million investment from Founders Fund.</em>[29] In early 2012, approximately two-thirds of the company was owned by its founder[30] and his 70 million shares were then estimated to be worth $875 million on private
                     markets,[31] which roughly valued SpaceX at $1.3 billion as of February 2012.[32] After the COTS 2+ flight in May 2012, the company private equity valuation nearly doubled to $2.4 billion.[33][34 ]
-                </p>
-                <p>
                     On 16 June 2009, SpaceX announced the opening of its Astronaut Safety and Mission Assurance Department. It hired former NASA astronaut Ken Bowersox to oversee the department as a vice president of the company.[35] However, it has since been reported that
                     the former astronaut subsequently left SpaceX in late 2011. No reason was given and no replacement in that position has been announced.[ 36]
-                </p>
-                <p>
                     In 2010, Musk's calculations convinced him that the colonization of Mars was possible.[37]
-                </p>
-                <p>
                     In 2012, an initial public offering (IPO) was perceived as possible by the end of 2013,[38] but then Musk stated in June 2013 that he planned to hold off any potential IPO until after the "Mars Colonial Transporter is flying regularly,"[39] and this was
                     reiterated in 2015 indicating that it would be many years before SpaceX would become a publicly traded company,[40][41] where Musk stated that "I just don't want [SpaceX] to be controlled by some private equity firm that would milk
                     it for near-term revenue"[42]
-                </p>
-
-                <p>
                     The company has grown rapidly since it was founded in 2002, growing from 160 employees in November 2005 to more than 500 by July 2008, to over 1,100 in 2010,[43][44] 1,800 in early 2012,[45] and 3,000 by early 2013.[46] The company had grown to 3,800
                     employees and contractors by October 2013,[47] and had "nearly 5,000" in late 2015[1] and February 2016.[2]
-                </p>
-                <p>
-                    Achievements of SpaceX include:[48]
-                </p>
-                <ul>
-                    <li>
-                      The first privately funded, liquid-fueled rocket (Falcon 1) to reach orbit (28 September 2008)
-                    </li>
-                    <li>
-                      The first privately funded company to successfully launch (by Falcon 9) orbit and recover a spacecraft (Dragon) (9 December 2010)
-                    </li>
-                    <li>
-                      The first private company to send a spacecraft (Dragon) to the International Space Station (25 May 2012)
-                    </li>
-                    <li>
-                      The first private company to send a satellite into geosynchronous orbit (SES-8, 3 December 2013)
-                    </li>
-                    <li>
-                      The first landing of a first stage orbital capable rocket (Falcon 9) (22 December 2015 1:39 UTC)
-                    </li>
-                    <li>
-                      The first water landing of a first stage orbital capable rocket (Falcon 9) (8 April 2016 20:53 UTC)
-                    </li>
-
-                </ul>
-
-                <p>
-                  On 22 December 2015 at around 1:29 UTC SpaceX launched an upgraded Falcon 9 rocket from Cape Canaveral Air Force Station into low Earth orbit. After completing its primary burn, the first stage of the multistage rocket detached from the
-                  second stage as usual. The first stage then fired some of its engines to send it back to Cape Canaveral, where it achieved the world's first successful landing of a rocket that was used for an orbital launch. The landing happened at
-                  around 1:39 UTC on December 22. Stage two successfully deployed eleven communication satellites for Orbcomm.
                 </p>
             </section>
             <section>
                 <h3 id="funding">Funding</h3>
-                <a href="#home">Back to Top</a>
+                <a href="#home" class="back1">Back to Top</a>
                 <p>
                     Number of SpaceX launches per year SpaceX is privately funded.[50] It developed its first launch vehicle-Falcon 1-and three rocket engines-Merlin, Kestrel, and Draco-completely with private capital. SpaceX contracted with the US government for a portion
                     of the development funding for the Falcon 9 launch vehicle, which uses a modified version of the Merlin rocket engine.[50] SpaceX is developing the Falcon Heavy launch vehicle,[51] the Raptor methane-fueled rocket engine,[52] and a
@@ -238,7 +94,7 @@
             </section>
             <section>
                 <h3 id="goals">Goals</h3>
-                <a href="#home">Back to Top</a>
+                <a href="#home" class="back1">Back to Top</a>
                 <p>
                     Conceptual render of Falcon Heavy at Pad 39A, Cape Canaveral Musk has stated that one of his goals is to improve the cost and reliability of access to space, ultimately by a factor of ten.[67] The company plans in 2004 called for "development of a heavy
                     lift product and even a super-heavy, if there is customer demand" with each size increase resulting in a significant decrease in cost per pound to orbit. CEO Elon Musk said: "I believe $500 per pound ($1,100/kg) or less is very achievable."[68]
@@ -316,7 +172,7 @@
             </section>
             <section>
                 <h3 id="setbacks">Setbacks</h3>
-                <a href="#home">Back to Top</a>
+                <a href="#home"  class="back1">Back to Top</a>
                 <section>
                     <h4>Failed launch</h4>
                     <p>
@@ -349,42 +205,154 @@
                     </p>
                 </section>
             </section>
-
-            <section>
-                <header>
+            <section class="launchTable">
+              <table class="launch-table-table">
+                <p class="tablehead">Past <img src="http://camsrobotics.org/wordpress/wp-content/uploads/2015/01/spacex-logo-transparent-1.png" style="height: 50px; width: 130px;" alt=""> Launches</p>
+                <thead>
+                  <tr class="tableHeader">
+                    <th>Launch Date</th>
+                    <th>Customer</th>
+                    <th>Launch Site</th>
+                    <th>Vehicle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5/27/2016</td>
+                    <td>THAICOM 8</td>
+                    <td>CAPE CANAVERAL</td>
+                    <td>FALCON 9</td>
+                  </tr>
+                  <tr>
+                    <td>5/6/2016</td>
+                    <td>SKY PERFECT JSAT CORPORATION (JAPAN)</td>
+                    <td>CAPE CANAVERAL</td>
+                    <td>FALCON 9</td>
+                  </tr>
+                  <tr>
+                    <td>4/8/2016</td>
+                    <td>NASA RESUPPLY TO ISS(FLIGHT 8)</td>
+                    <td>CAPE CANAVERAL</td>
+                    <td>DRAGON & FALCON 9</td>
+                  </tr>
+                  <tr>
+                    <td>3/4/2016</td>
+                    <td>SES (SES-9)</td>
+                    <td>CAPE CANAVERAL</td>
+                    <td>FALCON 9</td>
+                  </tr>
+                  <tr>
+                    <td>1/17/2016</td>
+                    <td>NASA (JASON-3)</td>
+                    <td>VANDENBERG</td>
+                    <td>FALCON 9</td>
+                  </tr>
+                  <tr>
+                    <td>12/21/2015</td>
+                    <td>ORBCOMM</td>
+                    <td>CAPE CANAVERAL</td>
+                    <td>FALCON 9</td>
+                  </tr>
+                  <tr>
+                    <td>4/27/2015</td>
+                    <td>THALES ALENIA SPACE</td>
+                    <td>CAPE CANAVERAL</td>
+                    <td>FALCON 9</td>
+                  </tr>
+                  <tr>
+                    <td>4/14/2016</td>
+                    <td>NASA RESUPPLY TO ISS (FLIGHT 6)</td>
+                    <td>CAPE CANAVERAL</td>
+                    <td>DRAGON & FALCON 9</td>
+                  </tr>
+                  <tr>
+                    <td>2/11/2016</td>
+                    <td>US AIR FORCE (DSCOVR)</td>
+                    <td>CAPE CANAVERAL</td>
+                    <td>FALCON 9</td>
+                  </tr>
+                  <tr>
+                    <td>1/10/2015</td>
+                    <td>NASA RESUPPLY TO ISS (FLIGHT 5)</td>
+                    <td>CAPE CANAVERAL</td>
+                    <td>DRAGON & FALCON 9</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+            <section class="comments">
+                <header class="commentHeader">
                     <h4>Comments</h4>
                 </header>
-
                 <article>
-                    <h4>Joe Smith</h4>
-                    <p>Elon is Awesome!</p>
+                    <h5>Joe Smith</h5>
+                    <p><small>June 4, 2016</small></p>
+                    <p class="comment">Elon is Awesome!</p>
                 </article>
                 <article>
-                    <h4>John Smith</h4>
-                    <p>No I hate him!</p>
+                    <h5>John Smith</h5>
+                    <p><small>June 5, 2016</small></p>
+                    <p class="comment">No I hate him!</p>
                 </article>
                 <article>
-                    <h4>Lisa Lisa</h4>
-                    <p>I'm right and you all are wrong</p>
+                    <h5>Lisa Lisa</h5>
+                    <p><small>June 6, 2016</small></p>
+                    <p class="comment">I'm right and you all are wrong</p>
                 </article>
             </section>
-
             <aside>
-                <section>
-                  <h3>Images</h3>
-                  <figure>
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Launch_of_Falcon_9_carrying_ORBCOMM_OG2-M1_%2816601442698%29.jpg/220px-Launch_of_Falcon_9_carrying_ORBCOMM_OG2-M1_%2816601442698%29.jpg" alt="Falcon with ORBCOMM">
-                      <figcaption>
-                          Launch of Falcon 9 carrying ORBCOMM OG2-M1
-                      </figcaption>
-                  </figure>
-                  <figure>
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Falcon_9_carrying_CRS-7_Dragon_on_SLC-40_pad_%2819045370790%29.jpg/220px-Falcon_9_carrying_CRS-7_Dragon_on_SLC-40_pad_%2819045370790%29.jpg" alt="Falcon with Dragon">
-                      <figcaption>
-                          Falcon 9 carrying CRS-7 Dragon on SLC-40 pad
-                      </figcaption>
-                  </figure>
-                </section>
+              <aside id="related-content">
+	                <section class="images">
+	                  <h1 class="mediaTitle">Images</h1>
+	                  <figure>
+	                      <img class="imgTag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Launch_of_Falcon_9_carrying_ORBCOMM_OG2-M1_%2816601442698%29.jpg/220px-Launch_of_Falcon_9_carrying_ORBCOMM_OG2-M1_%2816601442698%29.jpg" alt="Falcon with ORBCOMM">
+	                      <figcaption class="imageCaption">
+	                          Launch of Falcon 9 <br>carrying ORBCOMM OG2-M1
+	                      </figcaption>
+	                  </figure>
+	                  <figure>
+	                      <img class="imgTag" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Falcon_9_carrying_CRS-7_Dragon_on_SLC-40_pad_%2819045370790%29.jpg/220px-Falcon_9_carrying_CRS-7_Dragon_on_SLC-40_pad_%2819045370790%29.jpg" alt="Falcon with Dragon">
+	                      <figcaption class="imageCaption">
+	                          Falcon 9 carrying <br>CRS-7 Dragon on SLC-40 pad
+	                      </figcaption>
+	                  </figure>
+	                </section>
+	                <section class="videos">
+	                  <h1 class="videoTitle">Videos</h1>
+	                  <figure>
+	                    <video width="320" height="180" controls>
+	                      <source src="https://s3-us-west-1.amazonaws.com/codetahoe-public/lessons/spacex-history.mp4" type="video/mp4">
+	                      Your browser does not support HTML5 video.
+	                    </video>
+	                    <figcaption>
+	                      Mission Hightlights
+	                    </figcaption>
+	                  </figure>
+	                  <figure>
+	                    <iframe width="320" height="180" src="https://www.youtube.com/embed/eGimzB5QM1M" frameborder="0" allowfullscreen></iframe>
+	                    <figcaption>
+	                      SpaceX CRS-7 Falcon 9 Ready for Launch
+	                    </figcaption>
+	                  </figure>
+	                  <figure>
+	                    <iframe src="https://player.vimeo.com/video/125746164?title=0&byline=0&portrait=0" width="320" height="180" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	                    <figcaption>
+	                      Space Jam
+	                    </figcaption>
+	                  </figure>
+	                </section>
+	                <nav>
+	                  <h3>More Info</h3>
+	                  <ul>
+	                      <li>
+	                          <a href="https://en.wikipedia.org/wiki/Elon_Musk">Elon Bio</a>
+	                      </li>
+	                      <li>
+	                          <a href="https://en.wikipedia.org/wiki/Rocket">Rockets</a>
+	                      </li>
+	                  </ul>
+	                </nav>
+	            </aside>
                 <nav>
                   <h3>More Info</h3>
                   <ul>
@@ -444,20 +412,3 @@
 </body>
 
 </html>
-<style>
-.form {
-  text-align: center;
-}
-.formHeader {
-  text-align: center;
-  font-size: 50px;
-}
-.name {
-}
-.launch-table-table {
-  border: 1px solid green;
-}
-td {
-  border: 1px solid black;
-}
-</style>
