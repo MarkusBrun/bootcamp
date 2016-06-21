@@ -80,3 +80,20 @@ var garage = {
     return (this.cars[4].model[0])
   }
 }
+var createCar = function () {
+  var make = prompt('What car company would you like to add?')
+  var model = prompt ('What model is this car?')
+  var color = prompt ('What color would you like this car to be?')
+  garage.cars.push({make: make, model: model, color: color})
+}
+var carSearch = function () {
+  var search = prompt('What car model are you searching for Good Sir?')
+    for (var i = 0; i < garage.cars.length; i++) {
+      if (search === garage.cars[i].model) {
+        return garage.cars[i]
+      }
+    }
+    console.log('Car model not found')
+}
+/*if (search = garage.cars[i].model){
+return garage.cars[i]*/

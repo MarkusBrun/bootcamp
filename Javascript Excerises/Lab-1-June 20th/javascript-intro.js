@@ -33,10 +33,20 @@ console.log(students[2].name)
 //     new student object from the object.  Execute the function for 3 new students.
 //  Hint:  You add to an array like this:  myArray.push(object)
 //  Hint:  You can get the number of objects in an array by using myArray.length
-function addStudent (id, name, row, usesMac) {
-  students.push({id: id, name: name, row: row, usesMac: usesMac});
+function addStudent () {
+  var getName = prompt('What is the students name you would like to add?')
+  var getRow = prompt('What row is this student going to sit?')
+  typeof getRow === Number
+  var getUsesMac = prompt('Does this student use a mac?')
+  if (getUsesMac === 'yes', 'yea', 'true', 'Yea', 'Yes') {
+    getUsesMac = true
+  } else {
+    getUsesMac = false
+  }
+  id = students.length + 1
+  students.push({id: id, name: getName, row: getRow, usesMac: getUsesMac});
+  console.log("Student: " + getName + " has been added")
 }
-
 // 3.  Write a function that adds 5 to a number, then multiplies the result by 50.
 //     Log the result.
 function plusFiveTimesFifty (x) {
