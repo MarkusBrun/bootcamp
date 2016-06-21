@@ -28,12 +28,19 @@ var students = [
     usesMac: true
   }
 ]
-
+console.log(students[2].name)
 // 2.  Write a function to add students to the list of students, then print the
 //     new student object from the object.  Execute the function for 3 new students.
 //  Hint:  You add to an array like this:  myArray.push(object)
 //  Hint:  You can get the number of objects in an array by using myArray.length
-
+function addStudent (id, name, row, usesMac) {
+  students.push({id: id, name: name, row: row, usesMac: usesMac});
+}
 
 // 3.  Write a function that adds 5 to a number, then multiplies the result by 50.
 //     Log the result.
+function plusFiveTimesFifty (x) {
+  var plusFive = x + 5
+  var TimesFifty = plusFive * 50
+  return TimesFifty
+}
