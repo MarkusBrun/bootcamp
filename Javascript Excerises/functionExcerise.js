@@ -39,6 +39,7 @@ alert("The third car's color is " + cars[2].color)
     //8
 cars[0].model = null
 
+// OLOO Objects Linked to Other Objects
 var garage = {
     cars: [{
         make: 'Ferrari',
@@ -79,15 +80,16 @@ garage.createCar = function() {
     })
 }
 
+// ford !== FORD
 garage.carSearch = function() {
-        var search = prompt('What car model are you searching for Good Sir?');
-        for (var i = 0; i < this.cars.length; i++) {
-            if (search === this.cars[i].model) {
-                return this.cars[i]
-            }
+    var search = prompt('What car model are you searching for Good Sir?');
+    for (var i = 0; i < this.cars.length; i++) {
+        if (search === this.cars[i].model) {
+            return this.cars[i]
         }
-        console.log('Car model not found')
     }
+    console.log('Car model not found')
+}
     /*if (search = garage.cars[i].model){
     return garage.cars[i]*/
 
@@ -96,21 +98,43 @@ garage.carSearch = function() {
     this.cars = cars;
 
   }
-Garage.prototype.cars = function () {
-  return this.cars
-}
+// Garage.prototype.cars = function () {
+//   return this.cars
+// }
+Garage.prototype.findCar = function(search) {
+  // return this.cars.find(function(car) {
+  //   return car === search
+  // })
+  var result;
+  for (var i = 0; i < this.cars.length; i++) {
+    var car = this.cars[i]
+    if (search.make === car.make &&
+      search.model === car.model &&
+      search.color === car.color
+    ) {
+      result = car
+    }
+  }
 
+  return result;
+}
+var myGarage = new Garage([
+  new Car('Ford', 'f150', 'blue'),
+  new Car('Nissan', 'Ultima', 'red')
+])
+myGarage.findCar(new Car('Ford', 'f150', 'blue'))
+myGarage.findCar({ make: 'Ford', model: 'f150', color: 'blue' })
 var Car = function(make, model, color) {
   this.make = make;
   this.model = model;
   this.color = color;
 }
-Car.prototype.make = function () {
-  return this.make
-}
-Car.prototype.model = function () {
-  return this.model
-}
-Car.prototype.color = function () {
-  return this.color
-}
+// Car.prototype.make = function () {
+//   return this.make
+// }
+// Car.prototype.model = function () {
+//   return this.model
+// }
+// Car.prototype.color = function () {
+//   return this.color
+// }
