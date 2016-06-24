@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>There's always time for pie!</title>
+    <link rel="stylesheet" href="first-game.css">
+  </head>
+  <body class="full-wrapper">
+    <div class="content-wrapper">
+      <h1 class="headerText">Who ate the mother f#cking pie?</h1>
+      <aside class="controls">
+        <button class="btn" onclick="game.Start()">Start Game</button>
+        <p>Current Score: <span class="scoreNode">5</span></p>
+        <p>Time: <span class="currentTime"></span></p>
+        <p><span class="wrongAnswer"></span></p>
+        <form action="javascript://">
+        <input type="text" value="" placeholder="Enter your guess here" class="guessInput"> <button class="submit" value="Submit" type="submit">Guess</button>
+        <p><span class="errorMessage"></span></p>
+        <p><span class="previousGuess"></span></p>
+        </form>
+      </aside>
+    </div>
+    <script type="text/javascript" src="clean.js"></script>
+  </body>
+</html>
