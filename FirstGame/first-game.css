@@ -1,0 +1,53 @@
+.full-wrapper{
+  background-image: url('http://wallpapercave.com/wp/tmx6W6N.png');
+  -webkit-background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+.headerText {
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Orbitron', sans-serif;
+}
+.controls {
+  margin-left: 10%;
+  margin-top: 10%;
+  border: 1px solid black;
+  border-radius: 30%;
+  padding: 50px;
+  margin-right: 70%;
+  background-color: #D1D1D1;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  padding-bottom: 15px;
+}
+.students {
+  font-family: 'Orbitron', sans-serif;
+  margin-left: 60%;
+  margin-right: 20%;
+  margin-top: -250px;
+  padding: 25px;
+  text-align: center;
+  list-style-type: none;
+  background-color: #D1D1D1;
+  border: 1px solid black;
+  border-radius: 30%;
+  font-size: 20px;
+
+}
+.studentList {
+padding-bottom: 1000px;
+
+}
+.students > li {
+padding: 10px
+}
+
+.error {
+  color: red;
+}
+
+.removeStudent {
+  visibility: hidden;
+}

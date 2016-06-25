@@ -10,12 +10,20 @@
   font-size: 50px;
 }
 .controls {
-  margin-left: 20%;
+  margin-left: 60%;
   margin-top: 10%;
   border: 1px solid black;
   border-radius: 30%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 50px;
+  padding-left: 50px;
   margin-right: 20%;
   background-color: #D1D1D1;
-  text-align: center;
-  padding-bottom: 15px;
+  float: right;
+}
+.input-full {
+  margin-bottom: -2000px;
+  padding-bottom: -2000px;
+  float: left;
 }

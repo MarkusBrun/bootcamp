@@ -45,8 +45,38 @@ Game.prototype.Start = function() {
     var submitGuess = document.querySelector('.submit')
     var errorNode = document.querySelector('.errorMessage')
     var previousGuess = document.querySelector('.previousGuess')
-    /*-------------/QuerySelectors--------------*/
+    var student1Node = document.querySelector('.student1')
+    var student2Node = document.querySelector('.student2')
+    var student3Node = document.querySelector('.student3')
+    var student4Node = document.querySelector('.student4')
+    var student5Node = document.querySelector('.student5')
+    var student6Node = document.querySelector('.student6')
+    var student7Node = document.querySelector('.student7')
+    var student8Node = document.querySelector('.student8')
+    var student9Node = document.querySelector('.student9')
+    var student10Node = document.querySelector('.student10')
 
+    /*-------------/QuerySelectors--------------*/
+var student1;
+var student2;
+var student3;
+var student4;
+var student5;
+var student6;
+var student7;
+var student8;
+var student9;
+var student10;
+game.students[0] = student1;
+game.students[1] = student2;
+game.students[2] = student3;
+game.students[3] = student4;
+game.students[4] = student5;
+game.students[5] = student6;
+game.students[6] = student7;
+game.students[7] = student8;
+game.students[8] = student9;
+game.students[9] = student10;
 
 var gameTimer = function () {
   i = 20;
@@ -86,6 +116,7 @@ function checkGuess() {
                     return;
                 } else {
                     self.previousGuesses.push(guessInput.value)
+                    //game.students[i].id ===
                     previousGuess.innerHTML = game.students[i].firstname + ' ' + game.students[i].lastname + ' did not take the pie'
                     self.currentScore--
                     if (self.currentScore === 0){
@@ -101,6 +132,11 @@ function checkGuess() {
     }
     wrongInput('No matching student found.')
 }
+
+var nameCancel = function () {
+
+}
+
 
 var gameOver = function () {
   clearInterval(gameInterval)
