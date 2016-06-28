@@ -37,7 +37,6 @@ var getUser = function (object) {
   var jsonString = object[i]
   var newUsers = new User(jsonString.id, jsonString.name, jsonString.username, jsonString.email, jsonString.phone, jsonString.website)
   users.push(newUsers)
-
   }
   console.log(users);
 
