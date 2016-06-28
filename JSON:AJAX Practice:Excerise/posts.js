@@ -1,9 +1,9 @@
-function getPosts(success, error) {
+function postData(success, error) {
   var newRequest = new XMLHttpRequest();
 
   newRequest.onreadystatechange = function() {
     if (this.readyState === 4) {
-      if (this.status === 200) {
+      if (this.status > 200 && this.status < 300) {
         success(this.responseText);
       } else {
         error(this.status);
@@ -11,40 +11,30 @@ function getPosts(success, error) {
     }
   };
 
-  newRequest.open("GET", "http://jsonplaceholder.typicode.com/posts");
-  newRequest.send('');
+  newRequest.open("POST", "http://jsonplaceholder.typicode.com/posts");
+  newRequest.send(postInput);
 }
-var renderContent = document.getElementById('showContent')
+var titleInput = document.getElementById('title')
+var bodyInput = document.getElementById('body')
+var submitButton = document.getElementById('submit')
 
+var postInput;
 
-document.getElementById('btn-get-posts').addEventListener('click', function() {
+submitButton.addEventListener('click', function() {
   function onSuccess(responseText) {
-    var object = JSON.parse(responseText)
     console.log(responseText)
-    extract(object)
+    postInput = new Post(titleInput.value, bodyInput.value)
+    console.log(postInput)
+
+
   }
 
   function onError(status) {
     console.log(status);
   }
 
-  getPosts(onSuccess, onError);
+  postData(onSuccess, onError);
 });
-
-
-var extract = function (object) {
-  var data = []
-    for (var i = 0; i < object.length; i++) {
-    var allData = object[i];
-    var newData = new Post(allData.title, allData.body)
-    var node = document.createElement("LI");
-    var title = document.createTextNode(allData.title, allData.body)
-    node.appendChild(title)
-    renderContent.appendChild(node)
-    console.log(newData);
-    }
-  }
-
 
 
 var Post = function (title, body) {
