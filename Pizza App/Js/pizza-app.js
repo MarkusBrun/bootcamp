@@ -25,6 +25,11 @@ var zip = document.getElementById('zip');
 var pizzaDropdown = document.getElementById('pizza-dropdown');
 var pizzaSizeList = document.getElementById('pizza-size-list');
 var navLinks = document.querySelectorAll('.nav-link');
+var toppingList = document.getElementById('topping-list')
+var pizzaForm  = document.getElementById('pizza-form')
+var cartDisplay = document.getElementById('cart-display')
+
+
 
 var customer = {};
 var order = {};
@@ -39,7 +44,6 @@ buttonCustomer.addEventListener( 'click', function() {
   order = new Order(customer);
 
   loadPizzaOptions();
-
   console.log('');
   console.log('------ Customer Order Created! ------');
   console.log(customer);
@@ -53,6 +57,16 @@ buttonPizza.addEventListener( 'click', function() {
   pizza = new Pizza();
   var pizzaSize = new PizzaSize(pizzaDropdown.dataset.name, pizzaDropdown.dataset.cost);
   pizza.setSize(pizzaSize);
+
+  for (var i = 0; i < pizzaForm.elements.length; i++) {
+    var toppingInput.pizzaForm.elements[i]
+    if (pizzaForm.elements[i].type === 'checkbox')
+      if(toppingInput.checked === true){
+        var topping = new Topping(toppingInput.dataset.name, toppingInput.dataset.cost);
+        pizza.addTopping(topping);
+      }
+  }
+
   order.addPizza(pizza);
 
   console.log('');
@@ -69,6 +83,8 @@ var loadPizzaOptions = function() {
   delete pizzaDropdown.dataset.name;
   delete pizzaDropdown.dataset.cost;
   pizzaSizeList.innerHTML = '';
+  toppingList.innerHTML = '';
+
 
 
   for (i = 0; i < allPizzaSizes.length; i++) {
@@ -88,7 +104,35 @@ var loadPizzaOptions = function() {
     listItem.appendChild(listItemLink);
     pizzaSizeList.appendChild(listItem);
   }
+
+
+  for (i = 0; i < allToppings.length; i++) {
+  var thisTopping = allToppings[i]
+  var toppingDiv = document.createElement('div');
+  var toppingLabel = document.createElement('label');
+  var toppingInput = document.createElement('input')
+  var toppingLabelText = document.createTextNode(allToppings[i].name)
+
+
+  toppingDiv.className = 'checkbox';
+  toppingInput.type = 'checkbox';
+  toppingInput.dataset.name = thisTopping.dataset.name;
+  toppingInput.dataset.cost = thisTopping.dataset.cost;
+
+  toppingInput.appendChild(toppingInput);
+  toppingLabel.appendChild(toppingLabelText);
+  toppingDiv.appendChild(toppingLabelDiv);
+
+
+  }
 }
+
+
+
+
+
+
+
 
 // *********** Show Cart Page ***********
 buttonCart.addEventListener( 'click', function() {
@@ -107,6 +151,11 @@ linkAddMorePizzas.addEventListener( 'click', function() {
   loadPizzaOptions();
   navigate(currentPage, pageAddPizza);
 });
+
+for (var i = 0; i < order.pizzas.length; i++) {
+
+}
+
 
 
 // *********** Navigation ***********
