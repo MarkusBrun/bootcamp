@@ -7,7 +7,6 @@ GOALS FOR PIZZA UNICORN
 */
 
 // *********** Initialize ***********
-
 var pageAddCustomer = $('#page-add-customer')
 var pageAddPizza = $('#page-add-pizza')
 var pageCart = $('#page-cart')
@@ -34,11 +33,11 @@ var order = {};
 var pizza = {};
 
 // *********** Create Customer Page ***********
-pageAddCustomer.style.display = 'block';
+pageAddCustomer.css('display', 'block')
 var currentPage = pageAddCustomer;
 
-buttonCustomer.addEventListener( 'click', function() {
-  customer = new Customer(firstName.value, lastName.value, email.value, state.value, zip.value);
+buttonCustomer.on( 'click', function() {
+  customer = new Customer(firstName.val(), lastName.val(), email.val(), state.val(), zip.val());
   order = new Order(customer);
 
   loadPizzaOptions();
@@ -52,20 +51,14 @@ buttonCustomer.addEventListener( 'click', function() {
 });
 
 // *********** Add Pizzas Page ***********
-buttonPizza.addEventListener( 'click', function() {
+buttonPizza.on( 'click', function() {
   pizza = new Pizza();
-  var pizzaSize = new PizzaSize(pizzaDropdown.dataset.name, parseFloat(pizzaDropdown.dataset.cost));
-  pizza.setSize(pizzaSize);
-
-  for (i = 0; i < pizzaForm.elements.length; i++) {
-    var toppingInput = pizzaForm.elements[i];
-    if (toppingInput.type === 'checkbox') {
-      if (toppingInput.checked === true) {
-        var topping = new Topping(toppingInput.dataset.name, parseFloat(toppingInput.dataset.cost));
+  var pizzaSize = new PizzaSize(pizzaDropdown.data('name'), parseFloat(pizzaDropdown.data('cost')));
+  pizza.setSize(pizzaSize)
+  pizzaForm.find('input:checked').each(function (){
+        var topping = new Topping($(this).data('name'), parseFloat($(this).data('cost')));
         pizza.addTopping(topping);
-      }
-    }
-  }
+  })
   order.addPizza(pizza);
 
   console.log('');
@@ -80,52 +73,53 @@ buttonPizza.addEventListener( 'click', function() {
 
 var loadPizzaOptions = function() {
   var caretText = ' <span class="caret"></span>';
-  pizzaDropdown.innerHTML = "Select a Pizza" + caretText;
-  delete pizzaDropdown.dataset.name;
-  delete pizzaDropdown.dataset.cost;
-  pizzaSizeList.innerHTML = '';
-  toppingList.innerHTML = '';
+  pizzaDropdown.html("Select a Pizza" + caretText)
+  delete pizzaDropdown.data('name');
+  delete pizzaDropdown.data('cost')
+  pizzaSizeList.html('')
+  toppingList.html('')
 
-  for (i = 0; i < allPizzaSizes.length; i++) {
-    var listItemLink = document.createElement('a');
-    listItemLink.href = '#';
-    listItemLink.dataset.name = allPizzaSizes[i].name;
-    listItemLink.dataset.cost = allPizzaSizes[i].cost;
-    listItemLink.innerHTML = allPizzaSizes[i].name;
+  $.each(allPizzaSizes, function(index, size) {
+    var listItemLink = $('<a href="#"></a>');
+    listItemLink.data('name', size.name);
+    listItemLink.data('cost', size.cost);
+    listItemLink.html(size.name);
 
-    listItemLink.addEventListener( 'click', function() {
-      pizzaDropdown.innerHTML = this.innerHTML + caretText;
-      pizzaDropdown.dataset.name = this.dataset.name;
-      pizzaDropdown.setAttribute('data-cost', this.getAttribute('data-cost'));
+    listItemLink.on('click', function() {
+      pizzaDropdown.html(listItemLink.html() + caretText);
+      pizzaDropdown.data('name', listItemLink.data('name'));
+      pizzaDropdown.data('cost', listItemLink.data('cost'));
     });
 
-    var listItem = document.createElement('li');
-    listItem.appendChild(listItemLink);
-    pizzaSizeList.appendChild(listItem);
-  }
+    var listItem = $('<li></li>');
+    listItem.append(listItemLink);
+    pizzaSizeList.append(listItem);
+});
 
-  for (i = 0; i < allToppings.length; i++) {
+
+
+  $.each(allToppings, function(){
     var thisTopping = allToppings[i];
-    var toppingDiv = document.createElement('div');
-    var toppingLabel = document.createElement('label');
-    var toppingInput = document.createElement('input');
-    var toppingLabelText = document.createTextNode(thisTopping.name);
+    var toppingDiv = $('<div></div>')
+    var toppingLabel = $('<label></label>')
+    var toppingInput = $('<input></input>')
 
-    toppingDiv.className = 'checkbox';
-    toppingInput.type = 'checkbox';
-    toppingInput.dataset.name = thisTopping.name;
-    toppingInput.dataset.cost = thisTopping.cost;
+    toppingDiv.addClass('checkbox')
+    toppingInput.attr('type','checkbox')
+    toppingInput.data('name', this.name)
+    toppingInput.data('cost', this.cost)
 
-    toppingLabel.appendChild(toppingInput);
-    toppingLabel.appendChild(toppingLabelText);
-    toppingDiv.appendChild(toppingLabel);
-    toppingList.appendChild(toppingDiv);
-  }
+    toppingLabel.append(toppingInput);
+    toppingLabel.append(this.name);
+    toppingDiv.append(toppingLabel);
+    toppingList.append(toppingDiv)
+
+    })
 
 }
 
 // *********** Show Cart Page ***********
-buttonCart.addEventListener( 'click', function() {
+buttonCart.on( 'click', function() {
   var deliveryPerson = deliveryPeople[ Math.floor(Math.random() * deliveryPeople.length) ];
   order.addDeliveryPerson(deliveryPerson);
 
@@ -137,47 +131,47 @@ buttonCart.addEventListener( 'click', function() {
   navigate(currentPage, pageReceipt);
 });
 
-linkAddMorePizzas.addEventListener( 'click', function() {
+linkAddMorePizzas.on( 'click', function() {
   loadPizzaOptions();
   navigate(currentPage, pageAddPizza);
 });
 
 var showCart = function() {
 
-  cartDisplay.innerHTML = '';
+  cartDisplay.html('')
 
   for (i = 0; i < order.pizzas.length; i++) {
     var pizza = order.pizzas[i];
-    var pizzaDisplay = document.createElement('p');
-    pizzaDisplay.innerHTML = pizza.size.name + ': $' + pizza.size.cost.toFixed(2);
-    var toppingListDisplay = document.createElement('ul');
+    var pizzaDisplay = $('<p></p>')
+    pizzaDisplay.html(pizza.size.name + ': $' + pizza.size.cost.toFixed(2))
+    var toppingListDisplay = $('<ul></ul>')
 
     for (x = 0; x < pizza.toppings.length; x++) {
-      var toppingItem = document.createElement('li');
+      var toppingItem = $('<li></li>')
       var thisTopping = pizza.toppings[x];
-      toppingItem.innerHTML = thisTopping.name + ': $' + thisTopping.cost.toFixed(2);
-      toppingListDisplay.appendChild(toppingItem);
+      toppingItem.html(thisTopping.name + ': $' + thisTopping.cost.toFixed(2))
+      toppingListDisplay.append(toppingItem);
       console.log(toppingListDisplay);
     }
 
-    pizzaDisplay.appendChild(toppingListDisplay);
+    pizzaDisplay.append(toppingListDisplay);
     var pizzaTotal = document.createTextNode('Pizza Total: $' + pizza.totalCost.toFixed(2))
-    pizzaDisplay.appendChild(pizzaTotal);
+    pizzaDisplay.append(pizzaTotal);
 
 
-    cartDisplay.appendChild(pizzaDisplay);
+    cartDisplay.append(pizzaDisplay);
   }
 
   var orderTotal = document.createElement('p');
   orderTotal.innerHTML = 'Order Total: $' + order.totalCost.toFixed(2);
-  cartDisplay.appendChild(orderTotal);
+  cartDisplay.append(orderTotal);
 }
 
 // *********** Navigation ***********
 var navigate = function(pageFrom, pageTo) {
-  pageFrom.style.display = 'none';
+  pageFrom.css('display', 'none')
   currentPage = pageTo;
-  currentPage.style.display = 'block';
+  currentPage.css('display', 'block')
 }
 
 // Nav links

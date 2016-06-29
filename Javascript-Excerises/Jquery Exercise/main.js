@@ -15,21 +15,28 @@ $("article > h1").css('color', 'blue')
 //$("h1").css('color', 'red')
 
 
-//first way of appending through button
-$("#btn").click(function () {
-  $("#body").append('<article id="article-1"><h1>Shiny New JavaScript Framework</h1><p>Fuzzy Kitty is in! Run and download before it goes out of style.<a class="btn-get-it" href="get-it.html">Get it now!</a></p></article>')
-})
+// //liams way of appending through button
+// $('#btn')
+//    .click(function () {$('body').append('<article> <h1>New Article</h1> <p>Another very useful aspect of jQuery is that it allows you to chain actions on the same selector.</p> </article>')})
+//    .mouseover(function () {$('body').append('<article> <h1>Cooler Article</h1> <p>However, if you want to perform different actions depending on an element\'s attribute, then using the each() method will make sense</p> </article>')});
+
+
+
+// //first way of appending through button
+// $("#btn").click(function () {
+//   $("#body").append('<article id="article-1"><h1>Shiny New JavaScript Framework</h1><p>Fuzzy Kitty is in! Run and download before it goes out of style.<a class="btn-get-it" href="get-it.html">Get it now!</a></p></article>')
+// })
 
 // //second way of appending through button
-// $("button").click(append)
+// $("button").on('click mouseover', append)
 //
 // function append () {
-//   $("#body").append('<article id="article-1">Article Created Fam</article> ')
+//   $("#body").append('<article id="article-1"><h1>Shiny New JavaScript Framework</h1><p>Fuzzy Kitty is in! Run and download before it goes out of style.<a class="btn-get-it" href="get-it.html">Get it now!</a></p></article>')
 // }
 
 // //third way of appending through button
 // $("#btn").click(append2)
 //
 // function append2 () {
-// #('<article id="article-1">Article Created Fam</article> ').appendTo('#body')
+// #('<article id="article-1"><h1>Shiny New JavaScript Framework</h1><p>Fuzzy Kitty is in! Run and download before it goes out of style.<a class="btn-get-it" href="get-it.html">Get it now!</a></p></article>').appendTo('#body')
 // }
