@@ -1,0 +1,24 @@
+* {
+  font-family: sans-serif;
+}
+.wrapper {
+  background-color: grey;
+  margin-top: 15%;
+}
+.posts {
+  text-align: center;
+  margin-left: 30%;
+  margin-right: 30%;
+  border: 5px solid black;
+  padding: 20px;
+
+}
+#getPost {
+  color: black;
+  background-color: green;
+}
+.postPost {
+  border: 1px solid black;
+  padding: 25px;
+
+}
