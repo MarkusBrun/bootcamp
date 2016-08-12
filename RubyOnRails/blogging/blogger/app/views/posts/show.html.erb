@@ -1,0 +1,17 @@
+<h3>Go back to home <a href="/">page</a></h3>
+<h3>Go back to your <%= link_to 'blog' , @post.blog %></h3>
+<p>
+  <strong>Title</strong>
+  <%= @post.title %>
+</p>
+<p>
+  <strong>Body</strong>
+  <%= @post.body %>
+</p>
+<h2>Comments</h2>
+
+<%= render @post.comments %>
+
+<h2>Add a comment:</h2>
+
+<%= render 'comments/form' %>
